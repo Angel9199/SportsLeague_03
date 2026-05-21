@@ -255,6 +255,23 @@ public class LeagueDbContext : DbContext
                   .OnDelete(DeleteBehavior.Restrict);
         });
 
+
+        modelBuilder.Entity<MatchLineup>(entity =>
+        {
+            entity.HasKey(ml => ml.Id);
+
+            entity.HasOne(ml => ml.Match)
+                  .WithMany(m => m.Lineups)
+                  .HasForeignKey(ml => ml.MatchId);
+
+            entity.HasOne(ml => ml.Player)
+                  .WithMany(p => p.Lineups)
+                  .HasForeignKey(ml => ml.PlayerId);
+
+            // Índice único compuesto
+            entity.HasIndex(ml => new { ml.MatchId, ml.PlayerId }).IsUnique();
+        });
+
     }
 
 }
