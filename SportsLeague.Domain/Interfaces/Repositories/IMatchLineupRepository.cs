@@ -1,6 +1,4 @@
 ﻿using SportsLeague.Domain.Entities;
-using System.Collections.Generic;
-using System.Threading.Tasks;
 
 namespace SportsLeague.Domain.Interfaces.Repositories
 {

@@ -8,7 +8,7 @@
         public int MatchId { get; set; }
         public int PlayerId { get; set; }
 
-        // Propiedades
+        // Properties
         public bool IsStarter { get; set; }
         public string Position { get; set; }
 

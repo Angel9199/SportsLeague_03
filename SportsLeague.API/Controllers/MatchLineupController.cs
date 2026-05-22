@@ -2,7 +2,6 @@
 using Microsoft.AspNetCore.Mvc;
 using SportsLeague.API.DTOs.Request;
 using SportsLeague.API.DTOs.Response;
-using SportsLeague.Domain.Entities;
 using SportsLeague.Domain.Interfaces.Services;
 
 [ApiController]
